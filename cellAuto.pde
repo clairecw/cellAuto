@@ -82,7 +82,8 @@ void mousePressed() {
   for (int i = 0; i < 9; i++) {
     for (int j = 0; j < 9; j++) {
       if (mouseX >= i * 33 && mouseX <= i * 33 + 33 && mouseY >= j * 33 && mouseY <= j * 33 + 33) {
-        squares[i][j] = 1;
+        if (squares[i][j] == 0) squares[i][j] = 1;
+        if (squares[i][j] == 1) squares[i][j] = 0;
       }
     }
   }
